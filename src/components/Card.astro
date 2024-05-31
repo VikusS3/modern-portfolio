@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  img: string;
+}
+
+const { title, description, img } = Astro.props;
+---
+
+<article
+  class="bg-gradient-to-r from-[#130428] via-[#251043] to-[#190634] w-[570px] flex justify-center items-center py-10 rounded-2xl px-10 gap-10 relative h-48"
+>
+  <header>
+    <img src={img} alt=`Image de ${img}` class="w-72 h-auto" />
+  </header>
+  <main class="flex flex-col gap-2 justify-start items-start">
+    <h2 class="text-3xl font-medium">
+      {title}
+    </h2>
+    <p class="text-xs font-light">
+      {description}
+    </p>
+    <button
+      class="bg-[#2C1250] border-[#693B93] px-8 py-2 border-2 rounded-xl mt-2"
+    >
+      LEARN MORE
+    </button>
+  </main>
+  <div class="bg-[#4F228D] absolute w-[570px] -top-1 rounded-3xl h-20 -z-10">
+  </div>
+</article>
