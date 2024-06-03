@@ -1,0 +1,136 @@
+---
+import ContainerSkill from "./ConteinerSkill.astro";
+---
+
+<section class="w-full flex flex-col justify-center items-center mt-40">
+  <header class="flex flex-col gap-4 justify-center items-center">
+    <h2 class="text-2xl">
+      I'm currently looking to join a <span class="text-[#A362FF]">
+        cross-functional
+      </span> team
+    </h2>
+    <h3 class="text-lg">
+      that values improving people's lives through accessible design
+    </h3>
+  </header>
+
+  <ContainerSkill />
+
+  <div class="container">
+    <div class="central-icon"></div>
+    <div class="orbit orbit1"></div>
+    <div class="orbit orbit2"></div>
+    <div class="orbit orbit3"></div>
+    <div class="orbit-icon icon1">⚛️</div>
+    <div class="orbit-icon icon2">🔧</div>
+    <div class="orbit-icon icon3">💻</div>
+    <div class="orbit-icon icon4">📱</div>
+    <div class="orbit-icon icon5">🔍</div>
+    <div class="orbit-icon icon6">🔗</div>
+    <div class="orbit-icon icon7">🖥️</div>
+    <div class="orbit-icon icon8">📁</div>
+    <div class="orbit-icon icon9">📦</div>
+  </div>
+</section>
+
+<style>
+  .container {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 5em;
+  }
+
+  .central-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(#301080, 60%, #7840ad);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .central-icon:before {
+    content: url("/Simbolo.png");
+    margin-top: 8px;
+  }
+
+  .orbit {
+    position: absolute;
+    border: 1px solid #301080;
+    border-radius: 50%;
+  }
+
+  .orbit1 {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+  }
+
+  .orbit2 {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+  }
+
+  .orbit3 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .orbit-icon {
+    position: absolute;
+    color: #fff;
+  }
+
+  .icon1 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .icon2 {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .icon3 {
+    bottom: 10%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .icon4 {
+    bottom: 50%;
+    right: 0;
+    transform: translateY(50%);
+  }
+  .icon5 {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+  }
+  .icon6 {
+    bottom: 30%;
+    left: 10%;
+  }
+  .icon7 {
+    bottom: 0;
+    left: 40%;
+  }
+  .icon8 {
+    top: 0;
+    left: 40%;
+  }
+  .icon9 {
+    top: 70%;
+    right: 20%;
+  }
+</style>
