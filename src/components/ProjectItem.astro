@@ -1,0 +1,77 @@
+---
+import "@fontsource/poppins";
+
+interface Props {
+  headerPosition: string;
+  imagePositionx: string;
+  imagePositiony: string;
+  gradientPositionx: string;
+  gradientPositiony: string;
+  direction: string;
+  background: string;
+}
+
+const {
+  imagePositionx,
+  headerPosition,
+  imagePositiony,
+  direction,
+  background,
+  gradientPositionx,
+  gradientPositiony,
+} = Astro.props;
+---
+
+<article class=`flex ${direction} relative`>
+  <div class=`flex flex-col justify-start ${headerPosition} gap-6`>
+    <slot name="header" />
+
+    <main class="w-[669px] h-[165px] relative mt-3">
+      <div class=`${background} w-[669px] h-[165px] absolute -z-10 rounded-xl`>
+      </div>
+      <slot name="texto" />
+    </main>
+
+    <footer class="flex flex-row gap-6 pl-8 mt-3">
+      <img src="/IconsProject.svg" alt="" />
+      <img src="/IconsProject.svg" alt="" />
+    </footer>
+  </div>
+
+  <div>
+    <div class=`absolute z-20 ${imagePositionx} ${imagePositiony}`>
+      <img src="/Portfolio.png" alt="" />
+    </div>
+    <img
+      src="/gradiants/Gradient.svg"
+      alt="gradiante grande"
+      class=`absolute z-10 ${gradientPositionx} ${gradientPositiony}`
+    />
+  </div>
+</article>
+
+<style>
+  article {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .background-card-1 {
+    background: radial-gradient(
+      circle at 0% 0%,
+      #693b93 0%,
+      #6ebff422 77%,
+      #4690d400 100%
+    );
+    opacity: 0.22;
+  }
+
+  .background-card-2 {
+    background: radial-gradient(
+      circle at 100% 100%,
+      #693b93 0%,
+      #6ebff422 77%,
+      #4690d400 100%
+    );
+    opacity: 0.22;
+  }
+</style>
